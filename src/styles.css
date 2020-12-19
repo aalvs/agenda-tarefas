@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --color-white:#fff;
+    --color-dark: #1f2429;
+    --color-light:#f9f9f9;
+    --color-gray: #ccc;
+    --color-red: #f53948;
+    --color-green: #27a300;
+    --color-blue: #4895ef;
+    --color-pink: #f06;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-light);
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+}
+.wrapper {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.divisor {
+    max-width: 1070px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-lightgray);
+    padding: 10px 0;
+}
+.c-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.r-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.r-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .r-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 280px) and (max-width: 767px) {
+    .r-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu {
+        display: none;
+    }
+}

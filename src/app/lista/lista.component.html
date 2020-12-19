@@ -1,0 +1,12 @@
+<div class="wrapper r-grid">
+    <ul class="t-card c-flex" *ngFor="let t of lista">
+        <li>id: <span>{{t.id}}</span></li>
+        <li>data: <span>{{t.data}}</span></li>
+        <li>tarefa: <span>{{t.tarefa}}</span></li>
+        <li>tipo: <span>{{t.tipo}}</span></li>
+        <span *ngIf="!t.concluida" class="nao-concluida">Tarefa não concluída</span>
+        <span *ngIf="t.concluida" class="concluida">Tarefa concluída</span>
+        <button *ngIf="!t.concluida" (click)="t.exibirID()">Marcar como concluída</button>
+        <button *ngIf="t.concluida" (click)="t.exibirID()">Marcar como não concluída</button>
+    </ul>
+</div>
