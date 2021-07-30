@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Tasks {
+  id: number;
+  data: string;
+  tarefa: string;
+  tipo: string;
+  concluida: boolean;
+  exibirID: () => any;
+}
+
 @Component({
   selector: 'app-agenda',
   templateUrl: './agenda.component.html',
@@ -7,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaComponent implements OnInit {
 
-  listaTarefas: Object[];
+  listaTarefas: Array<Tasks>;
 
   constructor() { 
     this.listaTarefas = [
@@ -104,7 +113,7 @@ export class AgendaComponent implements OnInit {
   
 
   ngOnInit(): void {
-    // alert('AGENDA DE ANDRÉ ALVES');
+    console.log('AGENDA DE ANDRÉ ALVES');
   }
 
 }
